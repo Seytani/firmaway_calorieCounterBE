@@ -18,6 +18,7 @@ async function signup(req, res) {
     })
   } catch (error) {
     res.send(error)
+    return
   }
   const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET)
   res.send({ token })
