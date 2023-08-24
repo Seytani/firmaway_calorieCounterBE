@@ -67,7 +67,6 @@ async function deleteEntry(req, res) {
     console.error('Error deleting entry:', error);
     res.status(500).send('An error occurred while deleting the entry.');
   }
-  res.send({user})
 }
 
 module.exports = { addEntry, getEntries, editEntry, deleteEntry }
